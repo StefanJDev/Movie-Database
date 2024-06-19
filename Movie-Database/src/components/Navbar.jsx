@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="absolute w-full p-4 flex items=center justify-between z-50">
+    <div className="absolute w-full p-4 flex items-center justify-between z-50">
       <Link to="/">
         <h1 className="uppercase font-BebasNeue-Regular text-5xl cursor-pointer text-red-600 font-bold">Movies</h1>
       </Link>
