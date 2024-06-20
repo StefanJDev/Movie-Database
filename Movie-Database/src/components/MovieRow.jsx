@@ -10,7 +10,7 @@ const MovieRow = ({ title, url }) => {
       setMovies(response.data.results);
     });
   }, [url]);
-  console.log(movies);
+
   return (
     <>
       <div>

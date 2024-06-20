@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import img from '../assets/img/wall.jpg';
 import { Link } from 'react-router-dom';
+import { UserAuth } from '../context/AuthConfig';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const { user, logIn } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+
+    try {
+      await logIn(email, password);
+      navigate('/');
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -25,18 +36,19 @@ const Login = () => {
 
               <form onSubmit={handleSubmit} className="w-full flex flex-col py-4">
                 <input
-                  className="p-3 my-2 bg-gray-700 rounded"
+                  className="p-3 my-2 bg-gray-700 rounded border-2 border-red-600 focus:outline-none peer"
                   type="email"
-                  placeholder="Email"
+                  placeholder="example@gmail.com"
                   autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                  className="p-3 my-2 bg-gray-700 rounded"
+                  className="p-3 my-2 bg-gray-700 rounded border-2 border-red-600 focus:outline-none"
                   type="password"
                   placeholder="Password"
                   autoComplete="current-password"
+                  minLength={6}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
