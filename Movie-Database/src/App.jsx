@@ -6,6 +6,7 @@ import Signup from './pages/Signup';
 import Watchlist from './pages/Watchlist';
 import Navbar from './components/Navbar';
 import { AuthContextProvider } from './context/AuthConfig';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
@@ -16,7 +17,14 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/watchlist" element={<Watchlist />} />
+          <Route
+            path="/watchlist"
+            element={
+              <ProtectedRoute>
+                <Watchlist />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </AuthContextProvider>
     </>

@@ -11,14 +11,13 @@ const Hero = () => {
       const movies = response.data.results;
       const randomMovie = movies[Math.floor(Math.random() * movies.length)];
       setMovie(randomMovie);
-      console.log(randomMovie);
     });
   }, []);
 
-  const truncate = (string, maxLength) => {
-    if (!string) return '';
-    return string.length > maxLength ? `${string.slice(0, maxLength)}...` : string;
-  };
+  // const truncate = (string, maxLength) => {
+  //   if (!string) return '';
+  //   return string.length > maxLength ? `${string.slice(0, maxLength)}...` : string;
+  // };
 
   const { title, overview, backdrop_path, release_date, vote_average, runtime } = movie;
 
@@ -35,7 +34,7 @@ const Hero = () => {
               <button className="border border-gray-300 py-2 px-5 ml-4">Watch Later</button>
             </div>
             <p className="text-gray-400 text-sm">{release_date}</p>
-            <p className="w-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[60%] text-gray-200">{truncate(overview, 165)}</p>
+            <p className="w-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[60%] text-gray-200">{overview}</p>
             {/* <p>{vote_average}</p> */}
             {/* <p>{runtime}</p> */}
           </div>

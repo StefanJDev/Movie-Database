@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { imageUrl } from '../api/apiConfig';
 import { FaStar, FaRegStar } from 'react-icons/fa';
-import { useState } from 'react';
+import { db } from '../api/firebase';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { UserAuth } from '../context/AuthConfig';
 
 const MovieItem = ({ movie }) => {
-  const { like, setLike } = useState(false);
+  const [like, setLike] = useState(false);
+  const { user } = UserAuth();
 
   const { title, backdrop_path, poster_path, vote_average } = movie;
+
+  const markSavedShows = async () => {
+    const userEmail = user?.email;
+
+    if (userEmail) {
+      const userDoc = doc(db, 'users', userEmail);
+      setLike(!like);
+      await updateDoc(userDoc, {
+        savedShows: arrayUnion({ ...movie }),
+      });
+    } else {
+      alert('Please log in to save a movie');
+    }
+  };
+
   return (
     <div className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[350px]  inline-block  cursor-pointer m-2 overlow-hidden">
       <img
@@ -18,7 +36,7 @@ const MovieItem = ({ movie }) => {
       <div className="absolute top-0 left-0 w-full h-40 bg-black/70 opacity-0 hover:opacity-100">
         <p className="whitespace text-xs md:text-base  flex justify-center items-center h-full font-bold">{title}</p>
 
-        <p>
+        <p onClick={markSavedShows} className="cursor-pointer">
           {like ? (
             <FaStar size={25} className="absolute top-2 right-2 text-red-600" />
           ) : (
