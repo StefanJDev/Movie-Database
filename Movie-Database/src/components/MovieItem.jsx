@@ -6,7 +6,7 @@ import { useState } from 'react';
 const MovieItem = ({ movie }) => {
   const { like, setLike } = useState(false);
 
-  const { title, backdrop_path, poster_path } = movie;
+  const { title, backdrop_path, poster_path, vote_average } = movie;
   return (
     <div className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[350px]  inline-block  cursor-pointer m-2 overlow-hidden">
       <img
@@ -15,7 +15,7 @@ const MovieItem = ({ movie }) => {
         alt={title}
       />
 
-      <div className="absolute top-0 left-0 w-full h-40 bg-black/60 opacity-0 hover:opacity-100">
+      <div className="absolute top-0 left-0 w-full h-40 bg-black/70 opacity-0 hover:opacity-100">
         <p className="whitespace text-xs md:text-base  flex justify-center items-center h-full font-bold">{title}</p>
 
         <p>
