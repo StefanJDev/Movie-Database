@@ -15,11 +15,6 @@ const Hero = () => {
     });
   }, []);
 
-  // const truncate = (string, maxLength) => {
-  //   if (!string) return '';
-  //   return string.length > maxLength ? `${string.slice(0, maxLength)}...` : string;
-  // };
-
   // eslint-disable-next-line no-unused-vars
   const { title, overview, backdrop_path, release_date, vote_average, runtime } = movie;
 
@@ -27,7 +22,7 @@ const Hero = () => {
     <div className="w-full h-[550px] lg:h-[1000px]">
       <div className="w-full h-full">
         <div className="absolute w-full h-[550px] lg:h-[1000px] ">
-          <img className="w-full h-full object-cover object-top" src={imageUrl(backdrop_path, 'original')} alt={title} />
+          <img className="w-full h-full object-cover object-top" src={imageUrl(backdrop_path, 'original')} />
 
           <div className="absolute w-2/3 top-[20%]  lg:top-[60%]   p-4 md:p-8 bg-gradient-to-r from-black">
             <h1 className="text-3xl md:text-6xl  text-red-600">{title}</h1>
