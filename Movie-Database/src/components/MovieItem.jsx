@@ -6,6 +6,7 @@ import { db } from '../api/firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import { UserAuth } from '../context/AuthConfig';
 
+// eslint-disable-next-line react/prop-types
 const MovieItem = ({ movie }) => {
   const [like, setLike] = useState(false);
   const { user } = UserAuth();

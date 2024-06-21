@@ -18,3 +18,7 @@ export const minutesTohours = (minutes) => {
 
   return `${hours}h ${mins}m`;
 };
+
+export const truncate = (str, length) => {
+  return str?.length > length ? str.slice(0, length) + '...' : str;
+};
