@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import endpoints from '../api/apiConfig';
@@ -19,6 +20,7 @@ const Hero = () => {
   //   return string.length > maxLength ? `${string.slice(0, maxLength)}...` : string;
   // };
 
+  // eslint-disable-next-line no-unused-vars
   const { title, overview, backdrop_path, release_date, vote_average, runtime } = movie;
 
   return (

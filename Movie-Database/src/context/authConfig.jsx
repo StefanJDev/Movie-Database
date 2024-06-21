@@ -5,6 +5,7 @@ import { doc, setDoc } from 'firebase/firestore';
 
 const AuthContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 export function AuthContextProvider({ children }) {
   const [user, setUser] = useState({});
 

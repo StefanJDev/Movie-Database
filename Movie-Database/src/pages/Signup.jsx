@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import img from '../assets/img/wall.jpg';
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,6 +8,7 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // eslint-disable-next-line no-unused-vars
   const { user, signUp } = UserAuth();
   const navigate = useNavigate();
 

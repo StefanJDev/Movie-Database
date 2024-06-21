@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MovieItem from './MovieItem';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
+// eslint-disable-next-line react/prop-types
 const MovieRow = ({ title, url }) => {
   const [movies, setMovies] = useState([]);
   const rowId = Math.floor(Math.random() * 10);

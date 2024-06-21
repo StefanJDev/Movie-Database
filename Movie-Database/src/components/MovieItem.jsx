@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { imageUrl } from '../api/apiConfig';
 import { FaStar, FaRegStar } from 'react-icons/fa';
@@ -9,6 +10,7 @@ const MovieItem = ({ movie }) => {
   const [like, setLike] = useState(false);
   const { user } = UserAuth();
 
+  // eslint-disable-next-line react/prop-types, no-unused-vars
   const { title, backdrop_path, poster_path, vote_average } = movie;
 
   const markSavedShows = async () => {
