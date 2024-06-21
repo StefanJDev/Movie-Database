@@ -27,3 +27,11 @@ It correctly bundles Vite and React in production mode and optimizes the build f
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+# Firebase Docs
+
+https://firebase.google.com/docs/build
+
+### Firebase Vite and React Deployment
+
+[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
