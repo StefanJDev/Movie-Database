@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import endpoints from '../api/apiConfig';
 import { imageUrl } from '../api/apiConfig';
+import truncate from '../helpers/help';
 
 const Hero = () => {
   const [movie, setMovie] = useState({});
@@ -31,7 +32,7 @@ const Hero = () => {
               <button className="border border-gray-300 py-2 px-5 ml-4 text-xl">More Info</button>
             </div>
             <p className="text-gray-400 text-sm">{release_date}</p>
-            <p className="w-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[60%] text-gray-200">{overview}</p>
+            <p className="w-full md:max-w-[80%] lg:max-w-[60%] xl:max-w-[60%] text-gray-200">{truncate(overview, 150)}</p>
             {/* <p>{vote_average}</p> */}
             {/* <p>{runtime}</p> */}
           </div>
