@@ -30,12 +30,12 @@ const MovieItem = ({ movie }) => {
   return (
     <div className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[350px]  inline-block  cursor-pointer m-2 overlow-hidden">
       <img
-        className="w-full h-40 block object-cover object-top rounded-lg"
+        className="w-full h-40 block object-cover object-top rounded-lg "
         src={imageUrl(backdrop_path ?? poster_path, 'w500')}
         alt={title}
       />
 
-      <div className="absolute top-0 left-0 w-full h-40 bg-black/70 opacity-0 hover:opacity-100">
+      <div className="absolute top-0 left-0 w-full h-40 bg-black/70 opacity-0 hover:opacity-100 ease-in-out duration-300 ">
         <p className="whitespace text-xs md:text-base  flex justify-center items-center h-full font-bold">{title}</p>
 
         <p onClick={markSavedShows} className="cursor-pointer">

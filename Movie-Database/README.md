@@ -10,6 +10,18 @@
 - Tailwind CSS
 - React Icons
 
+# Folder Structure Conventions
+
+    .
+    ├── firebase
+    ├── src
+    ├──── api
+    ├──── assets
+    ├──── components
+    ├──── context
+    └──── pages
+
+
 # Getting Started with Vite
 
 ### `npm run dev`

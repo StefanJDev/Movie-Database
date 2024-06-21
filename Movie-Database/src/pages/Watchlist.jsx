@@ -4,7 +4,6 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { UserAuth } from '../context/AuthConfig';
 import { db } from '../api/firebase';
 import img from '../assets/img/wall.jpg';
-
 import { doc, onSnapshot, updateDoc, arrayRemove } from 'firebase/firestore';
 import { imageUrl } from '../api/apiConfig';
 import { AiFillCloseCircle } from 'react-icons/ai';

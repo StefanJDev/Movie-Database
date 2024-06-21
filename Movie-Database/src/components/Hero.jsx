@@ -27,7 +27,7 @@ const Hero = () => {
           <div className="absolute w-2/3 top-[20%]  lg:top-[60%]   p-4 md:p-8 bg-gradient-to-r from-black">
             <h1 className="text-3xl md:text-6xl  text-red-600">{title}</h1>
             <div className="mt-8 mb-4">
-              <button className=" bg-red-600 text-black py-2 px-5 border-none text-xl">Play</button>
+              <button className=" bg-red-600 text-white py-2 px-5 border-none text-xl">Play</button>
               <button className="border border-gray-300 py-2 px-5 ml-4 text-xl">More Info</button>
             </div>
             <p className="text-gray-400 text-sm">{release_date}</p>

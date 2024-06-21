@@ -25,21 +25,28 @@ const Navbar = () => {
       {user?.email ? (
         <div>
           <Link to="/watchlist">
-            <button className="pr-4">Watchlist</button>
+            <button className="text-red-600 bg-white px-6 py-2 cursor-pointer rounded-xl mr-8 hover:scale-110 ease-in-out duration-300 ">
+              Watchlist
+            </button>
           </Link>
 
-          <button onClick={handleLogout} className="bg-red-600 px-6 py-2 cursor-pointer rounded-xl ">
+          <button
+            onClick={handleLogout}
+            className="bg-red-600 px-6 py-2 cursor-pointer rounded-xl hover:scale-110 ease-in-out duration-300 "
+          >
             Log Out
           </button>
         </div>
       ) : (
         <div>
           <Link to="/login">
-            <button className="pr-4">Login</button>
+            <button className="text-red-600 bg-white px-6 py-2 cursor-pointer rounded-xl mr-8 hover:scale-110 ease-in-out duration-300">
+              Login
+            </button>
           </Link>
 
           <Link to="/signup">
-            <button className="bg-red-600 px-6 py-2 cursor-pointer rounded-xl ">Sign Up</button>
+            <button className="bg-red-600 px-6 py-2 cursor-pointer rounded-xl hover:scale-110 ease-in-out duration-300">Sign Up</button>
           </Link>
         </div>
       )}
