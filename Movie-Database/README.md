@@ -10,7 +10,7 @@
 - Tailwind CSS
 - React Icons
 
-# Folder Structure Conventions
+# Folder Structure
 
     .
     ├── firebase
