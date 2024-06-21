@@ -45,7 +45,7 @@ const Signup = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                  className="p-3 my-2 bg-gray-700 rounded border-2 border-red-600 focus:outline-none"
+                  className="p-3 my-2 bg-gray-700 rounded border-2 border-red-600 focus:outline-none "
                   type="password"
                   placeholder="Password"
                   autoComplete="current-password"
