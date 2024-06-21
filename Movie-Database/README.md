@@ -19,8 +19,9 @@
     ├──── assets
     ├──── components
     ├──── context
+    ├──── helpers
     └──── pages
-
+    	├─── README.md
 
 # Getting Started with Vite
 
